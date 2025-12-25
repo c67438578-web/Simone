@@ -1,15 +1,262 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Meu Site no GitHub</title>
-    <style>
-        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
-        h1 { color: #2ecc71; }
-    </style>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LOGOS Property Services LLC - Cleaning Services in Orlando</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "primary-dark": "#0b5db0",
+                        "background-light": "#ffffff",
+                        "background-off": "#f6f8fa",
+                        "background-dark": "#101922",
+                        "text-main": "#0d141b",
+                        "text-secondary": "#4c739a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.375rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
 </head>
-<body>
-    <h1>Olá, Mundo!</h1>
-    <p>Este site foi criado direto pelo GitHub.</p>
-</body>
-</html>
+<body class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased overflow-x-hidden">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-[#e7edf3] bg-background-light/95 backdrop-blur supports-[backdrop-filter]:bg-background-light/60 dark:border-gray-800 dark:bg-background-dark/95">
+<div class="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-2">
+<div class="flex size-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">cleaning_services</span>
+</div>
+<span class="text-lg font-bold tracking-tight text-text-main dark:text-white">LOGOS PROPERTY SERVICES</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary transition-colors" href="#services">Services</a>
+<a class="text-sm font-medium text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary transition-colors" href="#why-us">Why Us</a>
+<a class="text-sm font-medium text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary transition-colors" href="#contact">Contact</a>
+</nav>
+<button class="flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white transition-all hover:bg-primary-dark shadow-md shadow-primary/20">
+                Book Now
+            </button>
+</div>
+</header>
+<!-- Hero Section -->
+<div class="relative w-full overflow-hidden">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40 z-10"></div>
+<div class="h-full w-full bg-cover bg-center" data-alt="Modern clean living room interior with bright sunlight" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJu51e3UJIxQezOUIAavHlDvIrv3CU9yQc4si6xGlZ9JuziKPYQ1pRTAyeJUYa9Z7lIvGGEayoz2aaqv-tHA8plEJJX4L-bXfNoAZFQS6ZR71hfCY1OpFC8xp99_8h6n1PnoZqRYp8MgWUzNGt8hhjC5sopd60bN5xPUKxuVUyysTwc8cUPk-GJ9lJPtDJf6Fwi0R9rd9Q8-C6sAlRbsgHngDWKahggSdL4QBLSwYAu8yXkLRQyowSIWSKT3FSXgnNKIs88JmUIRwp');">
+</div>
+</div>
+<div class="relative z-20 mx-auto flex min-h-[600px] max-w-[1200px] flex-col items-center justify-center px-4 py-20 text-center sm:px-6 lg:px-8">
+<span class="mb-4 inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm border border-white/20">
+                Serving Orlando, Florida
+            </span>
+<h1 class="mb-6 max-w-4xl text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
+                Premium Cleaning Services for Your Property
+            </h1>
+<p class="mb-8 max-w-2xl text-lg text-gray-200 sm:text-xl">
+                From vacation rentals to post-construction cleanup. Experienced professionals delivering outstanding results starting at competitive rates.
+            </p>
+<div class="flex flex-col gap-4 sm:flex-row">
+<button class="flex min-w-[160px] items-center justify-center rounded-lg bg-primary px-6 py-3.5 text-base font-bold text-white transition-all hover:bg-primary-dark shadow-lg shadow-primary/30">
+                    Get a Free Quote
+                </button>
+<button class="flex min-w-[160px] items-center justify-center rounded-lg bg-white px-6 py-3.5 text-base font-bold text-text-main transition-all hover:bg-gray-100">
+                    View Services
+                </button>
+</div>
+</div>
+</div>
+<!-- Features / Services Grid -->
+<section class="bg-background-off dark:bg-background-dark py-20" id="services">
+<div class="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+<div class="mb-12 flex flex-col items-start gap-4 sm:items-center sm:text-center">
+<h2 class="text-3xl font-bold tracking-tight text-text-main dark:text-white sm:text-4xl">Our Cleaning Services</h2>
+<p class="max-w-2xl text-lg text-text-secondary dark:text-gray-400">
+                    We offer a comprehensive range of cleaning solutions tailored to your specific needs in the Orlando area.
+                </p>
+</div>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+<!-- Service 1 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-primary/50 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">holiday_village</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-text-main dark:text-white">Vacation Rentals</h3>
+<p class="mt-2 text-text-secondary dark:text-gray-400">Quick turnovers for short-term rentals. Ensure your guests arrive to a spotless home every time.</p>
+<p class="mt-3 font-semibold text-primary">Starting at $120.00</p>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-primary/50 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-text-main dark:text-white">Move-In / Move-Out</h3>
+<p class="mt-2 text-text-secondary dark:text-gray-400">Detailed cleaning to ensure you get your deposit back or start fresh in your new home.</p>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-primary/50 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">construction</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-text-main dark:text-white">Post-Construction</h3>
+<p class="mt-2 text-text-secondary dark:text-gray-400">Heavy-duty dust removal and cleanup after renovations or new builds.</p>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-primary/50 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">store</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-text-main dark:text-white">Commercial</h3>
+<p class="mt-2 text-text-secondary dark:text-gray-400">Reliable maintenance and janitorial services for offices and retail spaces.</p>
+</div>
+</div>
+<!-- Service 5 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-primary/50 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">home</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-text-main dark:text-white">Residential</h3>
+<p class="mt-2 text-text-secondary dark:text-gray-400">Regular housekeeping schedules (weekly, bi-weekly) to keep your home pristine.</p>
+</div>
+</div>
+<!-- Service 6 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-primary/50 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">cleaning_services</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-text-main dark:text-white">Deep Cleaning</h3>
+<p class="mt-2 text-text-secondary dark:text-gray-400">Intensive sanitation for those hard-to-reach areas, perfect for spring cleaning.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Highlight / CTA Section -->
+<section class="bg-primary dark:bg-primary-dark">
+<div class="mx-auto flex max-w-[1200px] flex-col items-center gap-8 px-4 py-16 text-center sm:px-6 lg:flex-row lg:justify-between lg:px-8 lg:text-left">
+<div class="flex flex-col gap-4 lg:max-w-2xl">
+<h2 class="text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl">
+                    Vacation Rentals Starting at Only $120.00
+                </h2>
+<p class="text-lg text-blue-100">
+                    Get your property guest-ready today. Experienced professionals deliver cost effective services at every job with outstanding results.
+                </p>
+</div>
+<div class="shrink-0">
+<button class="flex items-center justify-center rounded-lg bg-white px-8 py-4 text-lg font-bold text-primary transition-all hover:bg-gray-50 shadow-xl">
+                    Book Your Clean Now
+                </button>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="bg-background-light dark:bg-background-dark py-20" id="why-us">
+<div class="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+<div class="mb-16">
+<h2 class="mb-4 text-3xl font-bold tracking-tight text-text-main dark:text-white sm:text-4xl">Why Choose LOGOS?</h2>
+<p class="max-w-2xl text-lg text-text-secondary dark:text-gray-400">
+                    We pride ourselves on reliability, quality, and customer satisfaction throughout Orlando and Central Florida.
+                </p>
+</div>
+<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-col overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900">
+<div class="aspect-video w-full bg-cover bg-center" data-alt="Professional cleaner wiping a kitchen counter" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB-UAG5wD8YsEGqiullEdtbR2gATfRE905xed5qQ_nEpd0BV-mfUsL0_HRycjXKdIbWGbu_V-YVzjdw1I4IZ08blo9-zpwHnaaqti5otSzniKHAF7FUW5FvZutNMnnRmJhF3Dae_AbRysSq5NW28m9RRw6kjBZkcjXgTmTaqk273t0F0anTt_2i2MdUN4QdDZip4baYToEBFUVOObKf7cjNukXfNo-FgC-Ynr2LHHmT0xcLS8vUzG5aISRZ8PUrQAHlsTiRIbixl1Rh');">
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="mb-2 text-xl font-bold text-text-main dark:text-white">Experienced Professionals</h3>
+<p class="text-text-secondary dark:text-gray-400">Our team is vetted, trained, and equipped to handle every cleaning challenge with expertise and care.</p>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900">
+<div class="aspect-video w-full bg-cover bg-center" data-alt="Clean minimal living room with piggy bank symbolizing savings" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-B2pw1xJQImVNZTJ1cK8bj_pT52pO6md-Rpe4qjNfJAA8veowE5GoDX1Fhh6IhXewa0x8WWsqF9KDuGQElU0hu2wh7_-2QLDrPuXc4Fdsk53I3YuON_p6lws4REhoslZI4TjAsgsewhI6SV-zHDNNjPPkWL_6Ec9FulZG0LcdtrEBdH072-R1lSY1V1dN8WP45GLS4frarXYlUhmGHkYeO7-gTR6SSp6IDy80vmy2OIznB5ruX7J5hUw3U-7ZKhexhL_JKgwpN-Pn');">
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="mb-2 text-xl font-bold text-text-main dark:text-white">Cost-Effective</h3>
+<p class="text-text-secondary dark:text-gray-400">Competitive pricing tailored to your property size. We provide luxury service without the luxury price tag.</p>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900">
+<div class="aspect-video w-full bg-cover bg-center" data-alt="Sparkling clean bathroom with fresh towels" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBaXrpShRfTA-rdBCF2LhVEqHFMujRXp1pb1CtvqFqFTAJ8p16_jBKTZ8khDpnQF02rudLtp_jQG4a3VJAON0xInG0HpmvFt679_gr-GUKRGEbDvyZ5vyvykqI7FXK8LT9ab0aeLlnjtyrc_8k4_qrjWIZUC1vvyBLJNao_E5WuBus5xWkYLh-pD4195F6rsZKFLflZHkEbcI3tgw2rXtO5UKSueC5TFYtZbMYHjFjUGeKuVRfGxfSBHdarKLI6AUON330RPcBaPS5T');">
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="mb-2 text-xl font-bold text-text-main dark:text-white">Outstanding Results</h3>
+<p class="text-text-secondary dark:text-gray-400">We don't leave until the job is done to the highest standard. Your satisfaction is our top priority.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Simple Contact / Footer -->
+<footer class="border-t border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-950" id="contact">
+<div class="mx-auto max-w-[1200px] px-4 py-12 sm:px-6 lg:px-8">
+<div class="grid gap-8 lg:grid-cols-4">
+<div class="lg:col-span-1">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">cleaning_services</span>
+<span class="text-lg font-bold tracking-tight text-text-main dark:text-white">LOGOS</span>
+</div>
+<p class="mt-4 text-sm text-text-secondary dark:text-gray-400">
+                        Professional cleaning services for residential and commercial properties in Orlando, FL.
+                    </p>
+</div>
+<div>
+<h3 class="text-sm font-semibold uppercase tracking-wider text-text-main dark:text-white">Services</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Vacation Rentals</a></li>
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Move-In/Out</a></li>
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Commercial</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-semibold uppercase tracking-wider text-text-main dark:text-white">Company</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">About Us</a></li>
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Contact</a></li>
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-semibold uppercase tracking-wider text-text-main dark:text-white">Contact</h3>
+<ul class="mt-4 space-y-2">
+<li class="flex items-center gap-2 text-sm text-text-secondary dark:text-gray-400">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                            Orlando, Florida
+                        </li>
+<li class="flex items-center gap-2 text-sm text-text-secondary dark:text-gray-400">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+                            contact@logosservices.com
+                        </li>
+</ul>
+</div>
+</div>
+<div class="mt-12 border-t border-gray-100 pt-8 dark:border-gray-900">
+<p class="text-center text-xs text-gray-400">
+                    © 2024 LOGOS Property Services LLC. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>
