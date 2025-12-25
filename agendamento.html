@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Scheduling Page - Logos Property Services</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for sidebar if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-50 overflow-x-hidden">
+<!-- Navbar -->
+<header class="sticky top-0 z-50 w-full bg-white dark:bg-[#1a2632] border-b border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Logo -->
+<div class="flex items-center gap-3">
+<div class="size-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">cleaning_services</span>
+</div>
+<div>
+<h1 class="text-slate-900 dark:text-white text-lg font-extrabold leading-tight tracking-tight">LOGOS PROPERTY SERVICES</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium tracking-wide">ORLANDO'S PREMIER CLEANING</p>
+</div>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<!-- Phone CTA -->
+<div class="hidden md:flex">
+<a class="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-full hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors" href="tel:4075550123">
+<span class="material-symbols-outlined text-primary text-xl">call</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">(407) 555-0123</span>
+</a>
+</div>
+<!-- Mobile Menu Button -->
+<div class="md:hidden">
+<button class="p-2 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="relative w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+<div class="flex flex-col lg:flex-row gap-8 xl:gap-12">
+<!-- LEFT COLUMN: Booking Wizard -->
+<div class="flex-1 min-w-0">
+<!-- Heading Section -->
+<div class="mb-10">
+<h1 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white leading-tight mb-3">Book Your Cleaning in 60 Seconds</h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg">Complete the form below to schedule your service instantly.</p>
+</div>
+<!-- Progress Bar -->
+<div class="mb-10">
+<div class="flex items-center justify-between mb-2">
+<span class="text-sm font-bold text-primary">Service Selection</span>
+<span class="text-sm font-medium text-slate-400">Confirmation</span>
+</div>
+<div class="h-2 w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[35%] rounded-full"></div>
+</div>
+</div>
+<!-- Step 1: Choose Service Type -->
+<section class="mb-12">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+<span class="flex items-center justify-center size-8 rounded-full bg-primary text-white text-sm font-bold">1</span>
+                        Choose Service Type
+                    </h2>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<!-- Card 1 (Selected) -->
+<div class="group cursor-pointer relative flex flex-col gap-4 p-5 rounded-xl border-2 border-primary bg-primary/5 dark:bg-primary/10 transition-all">
+<div class="absolute top-4 right-4 text-primary">
+<span class="material-symbols-outlined fill-1">check_circle</span>
+</div>
+<div class="w-full aspect-[4/3] rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-700">
+<div class="w-full h-full bg-cover bg-center" data-alt="Bright living room interior clean and tidy" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7I-kC64gp6JyX0Nw8_JyQbp9rEyUF4EXA4eWudpfSPemGyXOwJXoPlXAc5JXfRMPI7qKcrfw7lhzPv6QoNmJQsTHurrn1nhiV8wMZFDk_QxSjocHqaL_sKHQLQohbM7yCZf7xwrZfeN0idJWBn1uH2x4TsJP2KjrUB_b5g-cmXMeUrd87yWu4LCGjn8-RupyQxoFu0rAkPq57ta5UQlVZGXzuim3ZfFzDJFMdTcER75X18y7pADw0UD3WQyL10J6_a0aS8pIw4guH');"></div>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white mb-1">Standard Residential</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Perfect for regular maintenance.</p>
+<p class="mt-3 font-bold text-primary">$120 base</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group cursor-pointer relative flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a2632] hover:border-primary/50 transition-all shadow-sm">
+<div class="w-full aspect-[4/3] rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-700">
+<div class="w-full h-full bg-cover bg-center" data-alt="Detailed view of a person cleaning a kitchen counter thoroughly" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCgJRhKeVhK0X7jZ0RWXG_zoA3RwFTzQqay22EyTkqpFNyLooNQ9KKnMDAc0rNcrSo556jYMP_Lp1Ve4MpZnzp6Fmk7PrClxLK7rtnflXVpy__tkhUUuGzOAthC2QC6LSeKeghA_H0G4IpbpfN7LBV-RZOG6SYTzCKF2cYV18nil3wCoVFFHZMuVkRaeHxH-cW7Pbh1W9Ul0UaES61xpDXC_GXr6FYm6ARS9sRcCVyCX8fPA7gCblHdOQ98MTu2eM2r6hsKS-wYCHq0');"></div>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white mb-1">Deep Cleaning</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Thorough scrub for every corner.</p>
+<p class="mt-3 font-bold text-slate-700 dark:text-slate-300">$200 base</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group cursor-pointer relative flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a2632] hover:border-primary/50 transition-all shadow-sm">
+<div class="w-full aspect-[4/3] rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-700">
+<div class="w-full h-full bg-cover bg-center" data-alt="Empty apartment room ready for move in" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRmBOzCVVTOkYdx9bfxcsXnhUTAHXzm1wcf9vNkDCYGbFdgpeOY9s4CKYYHoNgIqGt4ai18vq60hCzoaLqk-AS24bGD0t5cg9KRCeGmWmUNdUvulHg7G39JrAVR2NvGADDw_Mv3Q0nHRZcBQUVwF74jB3LfnTY8HgdHdTqSM15uGe2IuNe9NmJMCAwqraw1-mT666T_AdSqE1BI7SvNbL5V-GOB5ApRkGv5prhqlkabiKldzlTeCR5YVSQRVY9QH_tShdJo0wqJFeX');"></div>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white mb-1">Move-In / Move-Out</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Empty home cleaning service.</p>
+<p class="mt-3 font-bold text-slate-700 dark:text-slate-300">$250 base</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 2: Property Details -->
+<section class="mb-12">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+<span class="flex items-center justify-center size-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-sm font-bold">2</span>
+                        Property Details
+                    </h2>
+<div class="bg-white dark:bg-[#1a2632] rounded-xl border border-slate-200 dark:border-slate-700 p-6 md:p-8 shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Sq Footage -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Approx. Square Footage</label>
+<div class="relative">
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-800 p-3 pr-12 text-slate-900 dark:text-white focus:ring-primary focus:border-primary" placeholder="e.g. 1800" type="number"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm font-medium">sq. ft</span>
+</div>
+</div>
+<!-- Pet Toggle -->
+<div class="flex flex-col gap-2 justify-center">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Do you have pets?</label>
+<div class="flex items-center gap-4">
+<button class="flex-1 py-2.5 rounded-lg border border-primary bg-primary/10 text-primary font-bold text-sm">Yes</button>
+<button class="flex-1 py-2.5 rounded-lg border border-slate-200 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-400 font-medium text-sm transition-colors">No</button>
+</div>
+</div>
+<!-- Bedrooms Stepper -->
+<div class="flex items-center justify-between p-4 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">bed</span>
+<span class="font-bold text-slate-700 dark:text-slate-200">Bedrooms</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="size-8 rounded-full bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors text-slate-600 dark:text-white">
+<span class="material-symbols-outlined text-base">remove</span>
+</button>
+<span class="font-bold text-lg w-4 text-center">3</span>
+<button class="size-8 rounded-full bg-primary text-white flex items-center justify-center hover:bg-blue-600 transition-colors shadow-sm shadow-blue-200 dark:shadow-none">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+</div>
+</div>
+<!-- Bathrooms Stepper -->
+<div class="flex items-center justify-between p-4 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">bathtub</span>
+<span class="font-bold text-slate-700 dark:text-slate-200">Bathrooms</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="size-8 rounded-full bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors text-slate-600 dark:text-white">
+<span class="material-symbols-outlined text-base">remove</span>
+</button>
+<span class="font-bold text-lg w-4 text-center">2</span>
+<button class="size-8 rounded-full bg-primary text-white flex items-center justify-center hover:bg-blue-600 transition-colors shadow-sm shadow-blue-200 dark:shadow-none">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 3: Date & Time -->
+<section class="mb-12">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+<span class="flex items-center justify-center size-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-sm font-bold">3</span>
+                        Select Date &amp; Time
+                    </h2>
+<div class="bg-white dark:bg-[#1a2632] rounded-xl border border-slate-200 dark:border-slate-700 p-6 md:p-8 shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Calendar Mockup -->
+<div>
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-bold text-slate-900 dark:text-white">October 2023</h3>
+<div class="flex gap-2">
+<button class="p-1 hover:bg-slate-100 dark:hover:bg-slate-700 rounded"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="p-1 hover:bg-slate-100 dark:hover:bg-slate-700 rounded"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center text-sm mb-2">
+<span class="text-slate-400 font-medium">Su</span>
+<span class="text-slate-400 font-medium">Mo</span>
+<span class="text-slate-400 font-medium">Tu</span>
+<span class="text-slate-400 font-medium">We</span>
+<span class="text-slate-400 font-medium">Th</span>
+<span class="text-slate-400 font-medium">Fr</span>
+<span class="text-slate-400 font-medium">Sa</span>
+</div>
+<div class="grid grid-cols-7 gap-2 text-sm">
+<!-- Empty days -->
+<span></span><span></span>
+<!-- Days -->
+<button class="aspect-square flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500">1</button>
+<button class="aspect-square flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500">2</button>
+<button class="aspect-square flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500">3</button>
+<button class="aspect-square flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500">4</button>
+<button class="aspect-square flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500">5</button>
+<button class="aspect-square flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500">6</button>
+<button class="aspect-square flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500">7</button>
+<button class="aspect-square flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500">8</button>
+<button class="aspect-square flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500">9</button>
+<button class="aspect-square flex items-center justify-center rounded-full bg-primary text-white font-bold shadow-lg shadow-blue-200 dark:shadow-none">10</button>
+<button class="aspect-square flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300">11</button>
+<button class="aspect-square flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300">12</button>
+<button class="aspect-square flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300">13</button>
+</div>
+</div>
+<!-- Time Slots -->
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white mb-4">Available Time Slots</h3>
+<div class="grid grid-cols-2 gap-3">
+<button class="py-3 px-4 rounded-lg border border-slate-200 dark:border-slate-600 text-slate-500 dark:text-slate-400 text-sm hover:border-slate-400">08:00 AM - 10:00 AM</button>
+<button class="py-3 px-4 rounded-lg border border-primary bg-primary/5 text-primary font-bold text-sm shadow-sm">10:00 AM - 12:00 PM</button>
+<button class="py-3 px-4 rounded-lg border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 text-sm hover:border-primary hover:text-primary transition-colors">12:00 PM - 02:00 PM</button>
+<button class="py-3 px-4 rounded-lg border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 text-sm hover:border-primary hover:text-primary transition-colors">02:00 PM - 04:00 PM</button>
+<button class="py-3 px-4 rounded-lg border border-slate-200 dark:border-slate-600 text-slate-300 dark:text-slate-600 text-sm cursor-not-allowed bg-slate-50 dark:bg-slate-800">04:00 PM - 06:00 PM</button>
+</div>
+<p class="mt-4 text-xs text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-base">info</span>
+                                    Times are arrival windows.
+                                </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 4: Contact & Instructions -->
+<section class="mb-12">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+<span class="flex items-center justify-center size-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-sm font-bold">4</span>
+                        Contact Information
+                    </h2>
+<div class="space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Full Name</label>
+<input class="rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-[#1a2632] p-3 text-slate-900 dark:text-white focus:ring-primary focus:border-primary" placeholder="Jane Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Email Address</label>
+<input class="rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-[#1a2632] p-3 text-slate-900 dark:text-white focus:ring-primary focus:border-primary" placeholder="jane@example.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Phone Number</label>
+<input class="rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-[#1a2632] p-3 text-slate-900 dark:text-white focus:ring-primary focus:border-primary" placeholder="(407) 555-0123" type="tel"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Service Address</label>
+<input class="rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-[#1a2632] p-3 text-slate-900 dark:text-white focus:ring-primary focus:border-primary" placeholder="123 Sunshine Blvd, Orlando, FL" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 pt-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Special Instructions (Optional)</label>
+<textarea class="rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-[#1a2632] p-3 text-slate-900 dark:text-white focus:ring-primary focus:border-primary" placeholder="Gate code, parking info, specific focus areas..." rows="4"></textarea>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: Sticky Summary -->
+<div class="lg:w-[380px] shrink-0">
+<div class="sticky top-28 space-y-4">
+<div class="bg-white dark:bg-[#1a2632] rounded-xl border border-slate-200 dark:border-slate-700 shadow-lg overflow-hidden">
+<div class="p-5 border-b border-slate-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50">
+<h3 class="font-extrabold text-lg text-slate-900 dark:text-white">Booking Summary</h3>
+</div>
+<div class="p-5 space-y-4">
+<!-- Service Item -->
+<div class="flex justify-between items-start pb-4 border-b border-slate-100 dark:border-slate-700">
+<div>
+<p class="font-bold text-slate-900 dark:text-white">Standard Residential</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">3 Bed, 2 Bath</p>
+</div>
+<span class="font-medium text-slate-900 dark:text-white">$120.00</span>
+</div>
+<!-- Extras -->
+<div class="flex justify-between items-start pb-4 border-b border-slate-100 dark:border-slate-700">
+<div>
+<p class="font-medium text-sm text-slate-700 dark:text-slate-300">Pets Handling</p>
+</div>
+<span class="font-medium text-sm text-slate-900 dark:text-white">$15.00</span>
+</div>
+<!-- Date/Time Preview -->
+<div class="bg-primary/5 rounded-lg p-3 flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary">calendar_month</span>
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-wide mb-1">Scheduled For</p>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Tue, Oct 10th</p>
+<p class="text-sm text-slate-600 dark:text-slate-400">10:00 AM - 12:00 PM</p>
+</div>
+</div>
+<!-- Totals -->
+<div class="pt-2">
+<div class="flex justify-between mb-2">
+<span class="text-slate-500 dark:text-slate-400 text-sm">Subtotal</span>
+<span class="font-medium text-slate-700 dark:text-slate-300">$135.00</span>
+</div>
+<div class="flex justify-between mb-4">
+<span class="text-slate-500 dark:text-slate-400 text-sm">Tax (6.5%)</span>
+<span class="font-medium text-slate-700 dark:text-slate-300">$8.78</span>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-slate-200 dark:border-slate-700">
+<span class="font-bold text-lg text-slate-900 dark:text-white">Total</span>
+<span class="font-extrabold text-2xl text-primary">$143.78</span>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold text-lg py-4 rounded-lg shadow-lg shadow-blue-500/30 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span>Book Now</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<!-- Disclaimer -->
+<p class="text-center text-xs text-slate-400 mt-2">No payment required until service completion.</p>
+</div>
+</div>
+<!-- Trust Signals -->
+<div class="flex justify-center gap-6 py-2">
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+<span class="text-[10px] font-bold uppercase tracking-wide">Insured</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">thumb_up</span>
+<span class="text-[10px] font-bold uppercase tracking-wide">Satisfaction</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">encrypted</span>
+<span class="text-[10px] font-bold uppercase tracking-wide">Secure</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Simple -->
+<footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1a2632] mt-12 py-12">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">LOGOS PROPERTY SERVICES LLC</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Serving Orlando &amp; Surrounding Central Florida Areas</p>
+<div class="flex justify-center gap-6 text-sm text-slate-400">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Support</a>
+</div>
+<p class="mt-8 text-xs text-slate-300 dark:text-slate-600">© 2023 Logos Property Services LLC. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
