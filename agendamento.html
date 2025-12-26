@@ -1,3 +1,11 @@
+</section>
+            </div> ```
+
+**Você deve colar o formulário EXATAMENTE entre o `</section>` e o `</div>`.**
+
+Aqui está o arquivo `agendamento.html` **atualizado novamente**, já com o Passo 1 (Serviços) e o Passo 2 (Formulário do Cliente) juntos, para você não ter erro de colagem:
+
+```html
 <!DOCTYPE html>
 <html class="light" lang="en">
 <head>
@@ -17,21 +25,12 @@
                         "background-light": "#f6f7f8",
                         "background-dark": "#101922",
                     },
-                    fontFamily: {
-                        "display": ["Manrope", "sans-serif"]
-                    },
+                    fontFamily: { "display": ["Manrope", "sans-serif"] },
                     borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
                 },
             },
         }
     </script>
-    <style>
-        .service-card.active {
-            border-color: #137fec;
-            background-color: rgba(19, 127, 236, 0.05);
-            border-width: 2px;
-        }
-    </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-50 overflow-x-hidden">
     <header class="sticky top-0 z-50 w-full bg-white dark:bg-[#1a2632] border-b border-slate-200 dark:border-slate-700 shadow-sm">
@@ -93,6 +92,31 @@
                         </div>
                     </div>
                 </section>
+
+                <section class="mb-12">
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                        <span class="flex items-center justify-center size-8 rounded-full bg-primary text-white text-sm font-bold">2</span>
+                        Customer Information
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white dark:bg-[#1a2632] p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Full Name</label>
+                            <input type="text" id="cust-name" placeholder="John Doe" class="rounded-lg border-slate-200 dark:bg-slate-800 dark:border-slate-600 focus:border-primary focus:ring-primary p-2">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Email Address</label>
+                            <input type="email" id="cust-email" placeholder="john@example.com" class="rounded-lg border-slate-200 dark:bg-slate-800 dark:border-slate-600 focus:border-primary focus:ring-primary p-2">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Phone Number</label>
+                            <input type="tel" id="cust-phone" placeholder="(689) 000-0000" class="rounded-lg border-slate-200 dark:bg-slate-800 dark:border-slate-600 focus:border-primary focus:ring-primary p-2">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Service Address</label>
+                            <input type="text" id="cust-address" placeholder="Street, Apt, City" class="rounded-lg border-slate-200 dark:bg-slate-800 dark:border-slate-600 focus:border-primary focus:ring-primary p-2">
+                        </div>
+                    </div>
+                </section>
             </div>
 
             <div class="lg:w-[380px] shrink-0">
@@ -117,7 +141,6 @@
                                 <span>Book Now</span>
                                 <span class="material-symbols-outlined">arrow_forward</span>
                             </button>
-                            <p class="text-center text-xs text-slate-400 mt-2">No payment required until service completion.</p>
                         </div>
                     </div>
                 </div>
@@ -125,52 +148,32 @@
         </div>
     </main>
 
-    <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1a2632] mt-12 py-12">
-        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">LOGOS PROPERTY SERVICES LLC</h2>
-            <div class="flex justify-center gap-6 text-sm text-slate-400">
-                <a class="hover:text-primary" href="index.html">Home</a>
-                <a class="hover:text-primary" href="services.html">Services</a>
-                <a class="hover:text-primary" href="contact.html">Contact</a>
-            </div>
-            <p class="mt-8 text-xs text-slate-300 dark:text-slate-600">© 2024 Logos Property Services LLC. All rights reserved.</p>
-        </div>
-    </footer>
-
     <script>
         function selectService(element) {
-            // 1. Resetar estilos de todos os cards
             const cards = document.querySelectorAll('.service-card');
             cards.forEach(card => {
                 card.classList.remove('active', 'border-2', 'border-primary', 'bg-primary/5');
                 card.classList.add('border', 'border-slate-200', 'bg-white', 'dark:bg-[#1a2632]');
                 card.querySelector('.check-icon').classList.add('hidden');
             });
-
-            // 2. Ativar o card clicado
             element.classList.add('active', 'border-2', 'border-primary', 'bg-primary/5');
             element.classList.remove('border', 'border-slate-200', 'bg-white');
             element.querySelector('.check-icon').classList.remove('hidden');
 
-            // 3. Pegar dados
             const name = element.getAttribute('data-name');
             const price = parseFloat(element.getAttribute('data-price'));
-            
-            // 4. Calcular Total (Taxa de ~19.816% para manter a proporção do seu print)
             const taxRate = 0.19816;
             const total = price * (1 + taxRate);
 
-            // 5. Atualizar Sumário
             document.getElementById('summary-name').innerText = name;
             document.getElementById('summary-base').innerText = `$${price.toFixed(2)}`;
             document.getElementById('summary-total').innerText = `$${total.toFixed(2)}`;
         }
 
-        // Evento do botão Book Now (placeholder por enquanto)
         document.getElementById('book-now-btn').addEventListener('click', () => {
-            const service = document.getElementById('summary-name').innerText;
-            const total = document.getElementById('summary-total').innerText;
-            alert(`Ready to book: ${service} for ${total}\n\nNext step: Connect to Supabase!`);
+            const name = document.getElementById('cust-name').value;
+            if(!name) { alert('Please enter your name'); return; }
+            alert('Sending to Supabase...');
         });
     </script>
 </body>
