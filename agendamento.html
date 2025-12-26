@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Scheduling - LOGOS Property Services</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Scheduling - LOGOS Property Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -24,107 +25,153 @@
             },
         }
     </script>
+    <style>
+        .service-card.active {
+            border-color: #137fec;
+            background-color: rgba(19, 127, 236, 0.05);
+            border-width: 2px;
+        }
+    </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-50 overflow-x-hidden">
-<header class="sticky top-0 z-50 w-full bg-white dark:bg-[#1a2632] border-b border-slate-200 dark:border-slate-700 shadow-sm">
-<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-20">
-<div class="flex items-center gap-3">
-<div class="size-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
-<span class="material-symbols-outlined text-3xl">cleaning_services</span>
-</div>
-<div>
-<h1 class="text-slate-900 dark:text-white text-lg font-extrabold leading-tight tracking-tight">LOGOS PROPERTY SERVICES</h1>
-<p class="text-xs text-slate-500 dark:text-slate-400 font-medium tracking-wide uppercase">Orlando's Premier Cleaning</p>
-</div>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors" href="index.html">Home</a>
-<a class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors" href="services.html">Services</a>
-<a class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors" href="about.html">About</a>
-<a class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors" href="contact.html">Contact</a>
-</nav>
-<div class="hidden md:flex">
-<a class="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-full hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors" href="tel:6893397348">
-<span class="material-symbols-outlined text-primary text-xl">call</span>
-<span class="text-sm font-bold text-slate-900 dark:text-white">(689) 339-7348</span>
-</a>
-</div>
-</div>
-</div>
-</header>
+    <header class="sticky top-0 z-50 w-full bg-white dark:bg-[#1a2632] border-b border-slate-200 dark:border-slate-700 shadow-sm">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <div class="size-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined text-3xl">cleaning_services</span>
+                    </div>
+                    <div>
+                        <h1 class="text-slate-900 dark:text-white text-lg font-extrabold leading-tight tracking-tight">LOGOS PROPERTY SERVICES</h1>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 font-medium tracking-wide uppercase">Orlando's Premier Cleaning</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors" href="index.html">Home</a>
+                    <a class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors" href="services.html">Services</a>
+                    <a class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors" href="about.html">About</a>
+                    <a class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors" href="contact.html">Contact</a>
+                </nav>
+                <div class="hidden md:flex">
+                    <a class="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-full hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors" href="tel:6893397348">
+                        <span class="material-symbols-outlined text-primary text-xl">call</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">(689) 339-7348</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<main class="relative w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-<div class="flex flex-col lg:flex-row gap-8 xl:gap-12">
-<div class="flex-1 min-w-0">
-<div class="mb-10">
-<h1 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white leading-tight mb-3">Book Your Cleaning</h1>
-<p class="text-slate-500 dark:text-slate-400 text-lg">Complete the form below to schedule your service instantly.</p>
-</div>
+    <main class="relative w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        <div class="flex flex-col lg:flex-row gap-8 xl:gap-12">
+            <div class="flex-1 min-w-0">
+                <div class="mb-10">
+                    <h1 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white leading-tight mb-3">Book Your Cleaning</h1>
+                    <p class="text-slate-500 dark:text-slate-400 text-lg">Complete the form below to schedule your service instantly.</p>
+                </div>
 
-<section class="mb-12">
-<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-<span class="flex items-center justify-center size-8 rounded-full bg-primary text-white text-sm font-bold">1</span>
-Choose Service Type
-</h2>
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-<div class="group cursor-pointer relative flex flex-col gap-4 p-5 rounded-xl border-2 border-primary bg-primary/5 dark:bg-primary/10 transition-all">
-<div class="absolute top-4 right-4 text-primary"><span class="material-symbols-outlined fill-1">check_circle</span></div>
-<h3 class="font-bold text-slate-900 dark:text-white mb-1">Standard Residential</h3>
-<p class="mt-3 font-bold text-primary">$120 base</p>
-</div>
-<div class="group cursor-pointer relative flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a2632] hover:border-primary/50 transition-all shadow-sm">
-<h3 class="font-bold text-slate-900 dark:text-white mb-1">Deep Cleaning</h3>
-<p class="mt-3 font-bold text-slate-700 dark:text-slate-300">$200 base</p>
-</div>
-<div class="group cursor-pointer relative flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a2632] hover:border-primary/50 transition-all shadow-sm">
-<h3 class="font-bold text-slate-900 dark:text-white mb-1">Move-In / Out</h3>
-<p class="mt-3 font-bold text-slate-700 dark:text-slate-300">$250 base</p>
-</div>
-</div>
-</section>
+                <section class="mb-12">
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                        <span class="flex items-center justify-center size-8 rounded-full bg-primary text-white text-sm font-bold">1</span>
+                        Choose Service Type
+                    </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4" id="service-options">
+                        <div onclick="selectService(this)" data-name="Standard Residential" data-price="120" class="service-card active group cursor-pointer relative flex flex-col gap-4 p-5 rounded-xl border-2 border-primary bg-primary/5 dark:bg-primary/10 transition-all">
+                            <div class="check-icon absolute top-4 right-4 text-primary"><span class="material-symbols-outlined fill-1">check_circle</span></div>
+                            <h3 class="font-bold text-slate-900 dark:text-white mb-1">Standard Residential</h3>
+                            <p class="mt-3 font-bold text-primary">$120 base</p>
+                        </div>
+                        <div onclick="selectService(this)" data-name="Deep Cleaning" data-price="200" class="service-card group cursor-pointer relative flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a2632] hover:border-primary/50 transition-all shadow-sm">
+                            <div class="check-icon hidden absolute top-4 right-4 text-primary"><span class="material-symbols-outlined fill-1">check_circle</span></div>
+                            <h3 class="font-bold text-slate-900 dark:text-white mb-1">Deep Cleaning</h3>
+                            <p class="mt-3 font-bold text-slate-700 dark:text-slate-300">$200 base</p>
+                        </div>
+                        <div onclick="selectService(this)" data-name="Move-In / Out" data-price="250" class="service-card group cursor-pointer relative flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a2632] hover:border-primary/50 transition-all shadow-sm">
+                            <div class="check-icon hidden absolute top-4 right-4 text-primary"><span class="material-symbols-outlined fill-1">check_circle</span></div>
+                            <h3 class="font-bold text-slate-900 dark:text-white mb-1">Move-In / Out</h3>
+                            <p class="mt-3 font-bold text-slate-700 dark:text-slate-300">$250 base</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
 
-</div>
+            <div class="lg:w-[380px] shrink-0">
+                <div class="sticky top-28 space-y-4">
+                    <div class="bg-white dark:bg-[#1a2632] rounded-xl border border-slate-200 dark:border-slate-700 shadow-lg overflow-hidden">
+                        <div class="p-5 border-b border-slate-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50">
+                            <h3 class="font-extrabold text-lg text-slate-900 dark:text-white">Booking Summary</h3>
+                        </div>
+                        <div class="p-5 space-y-4">
+                            <div class="flex justify-between items-start pb-4 border-b border-slate-100 dark:border-slate-700">
+                                <div>
+                                    <p id="summary-name" class="font-bold text-slate-900 dark:text-white">Standard Residential</p>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400">3 Bed, 2 Bath</p>
+                                </div>
+                                <span id="summary-base" class="font-medium text-slate-900 dark:text-white">$120.00</span>
+                            </div>
+                            <div class="flex justify-between items-center pt-4 border-t border-slate-200 dark:border-slate-700">
+                                <span class="font-bold text-lg text-slate-900 dark:text-white">Total Estimated</span>
+                                <span id="summary-total" class="font-extrabold text-2xl text-primary">$143.78</span>
+                            </div>
+                            <button id="book-now-btn" class="w-full bg-primary hover:bg-blue-600 text-white font-bold text-lg py-4 rounded-lg shadow-lg transition-all flex items-center justify-center gap-2">
+                                <span>Book Now</span>
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                            <p class="text-center text-xs text-slate-400 mt-2">No payment required until service completion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-<div class="lg:w-[380px] shrink-0">
-<div class="sticky top-28 space-y-4">
-<div class="bg-white dark:bg-[#1a2632] rounded-xl border border-slate-200 dark:border-slate-700 shadow-lg overflow-hidden">
-<div class="p-5 border-b border-slate-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50">
-<h3 class="font-extrabold text-lg text-slate-900 dark:text-white">Booking Summary</h3>
-</div>
-<div class="p-5 space-y-4">
-<div class="flex justify-between items-start pb-4 border-b border-slate-100 dark:border-slate-700">
-<div>
-<p class="font-bold text-slate-900 dark:text-white">Standard Residential</p>
-<p class="text-sm text-slate-500 dark:text-slate-400">3 Bed, 2 Bath</p>
-</div>
-<span class="font-medium text-slate-900 dark:text-white">$120.00</span>
-</div>
-<div class="flex justify-between items-center pt-4 border-t border-slate-200 dark:border-slate-700">
-<span class="font-bold text-lg text-slate-900 dark:text-white">Total Estimated</span>
-<span class="font-extrabold text-2xl text-primary">$143.78</span>
-</div>
-<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold text-lg py-4 rounded-lg shadow-lg transition-all flex items-center justify-center gap-2">
-<span>Book Now</span>
-<span class="material-symbols-outlined">arrow_forward</span>
-</button>
-<p class="text-center text-xs text-slate-400 mt-2">No payment required until service completion.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
+    <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1a2632] mt-12 py-12">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">LOGOS PROPERTY SERVICES LLC</h2>
+            <div class="flex justify-center gap-6 text-sm text-slate-400">
+                <a class="hover:text-primary" href="index.html">Home</a>
+                <a class="hover:text-primary" href="services.html">Services</a>
+                <a class="hover:text-primary" href="contact.html">Contact</a>
+            </div>
+            <p class="mt-8 text-xs text-slate-300 dark:text-slate-600">© 2024 Logos Property Services LLC. All rights reserved.</p>
+        </div>
+    </footer>
 
-<footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1a2632] mt-12 py-12">
-<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">LOGOS PROPERTY SERVICES LLC</h2>
-<div class="flex justify-center gap-6 text-sm text-slate-400">
-<a class="hover:text-primary" href="index.html">Home</a>
-<a class="hover:text-primary" href="services.html">Services</a>
-<a class="hover:text-primary" href="contact.html">Contact</a>
-</div>
-<p class="mt-8 text-xs text-slate-300 dark:text-slate-600">© 2024 Logos Property Services LLC. All rights reserved.</p>
-</div>
-</footer>
-</body></html>
+    <script>
+        function selectService(element) {
+            // 1. Resetar estilos de todos os cards
+            const cards = document.querySelectorAll('.service-card');
+            cards.forEach(card => {
+                card.classList.remove('active', 'border-2', 'border-primary', 'bg-primary/5');
+                card.classList.add('border', 'border-slate-200', 'bg-white', 'dark:bg-[#1a2632]');
+                card.querySelector('.check-icon').classList.add('hidden');
+            });
+
+            // 2. Ativar o card clicado
+            element.classList.add('active', 'border-2', 'border-primary', 'bg-primary/5');
+            element.classList.remove('border', 'border-slate-200', 'bg-white');
+            element.querySelector('.check-icon').classList.remove('hidden');
+
+            // 3. Pegar dados
+            const name = element.getAttribute('data-name');
+            const price = parseFloat(element.getAttribute('data-price'));
+            
+            // 4. Calcular Total (Taxa de ~19.816% para manter a proporção do seu print)
+            const taxRate = 0.19816;
+            const total = price * (1 + taxRate);
+
+            // 5. Atualizar Sumário
+            document.getElementById('summary-name').innerText = name;
+            document.getElementById('summary-base').innerText = `$${price.toFixed(2)}`;
+            document.getElementById('summary-total').innerText = `$${total.toFixed(2)}`;
+        }
+
+        // Evento do botão Book Now (placeholder por enquanto)
+        document.getElementById('book-now-btn').addEventListener('click', () => {
+            const service = document.getElementById('summary-name').innerText;
+            const total = document.getElementById('summary-total').innerText;
+            alert(`Ready to book: ${service} for ${total}\n\nNext step: Connect to Supabase!`);
+        });
+    </script>
+</body>
+</html>
