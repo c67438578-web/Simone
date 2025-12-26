@@ -1,9 +1,15 @@
-</section>
-            </div> ```
+<head>
+    <meta charset="utf-8"/>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-**Você deve colar o formulário EXATAMENTE entre o `</section>` e o `</div>`.**
+</head> ```
 
-Aqui está o arquivo `agendamento.html` **atualizado novamente**, já com o Passo 1 (Serviços) e o Passo 2 (Formulário do Cliente) juntos, para você não ter erro de colagem:
+---
+
+### 2. O arquivo completo (Versão Final Pronta para Uso)
+Para não ter erro de onde colar cada coisa, aqui está o código **completo** do seu arquivo `agendamento.html`. 
+
+**Atenção:** Eu deixei um espaço marcado para você colocar a sua **URL** e a sua **Chave Anon** que você pegou no painel do Supabase.
 
 ```html
 <!DOCTYPE html>
@@ -15,6 +21,9 @@ Aqui está o arquivo `agendamento.html` **atualizado novamente**, já com o Pass
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -51,12 +60,6 @@ Aqui está o arquivo `agendamento.html` **atualizado novamente**, já com o Pass
                     <a class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors" href="about.html">About</a>
                     <a class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors" href="contact.html">Contact</a>
                 </nav>
-                <div class="hidden md:flex">
-                    <a class="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-full hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors" href="tel:6893397348">
-                        <span class="material-symbols-outlined text-primary text-xl">call</span>
-                        <span class="text-sm font-bold text-slate-900 dark:text-white">(689) 339-7348</span>
-                    </a>
-                </div>
             </div>
         </div>
     </header>
@@ -101,19 +104,19 @@ Aqui está o arquivo `agendamento.html` **atualizado novamente**, já com o Pass
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white dark:bg-[#1a2632] p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
                         <div class="flex flex-col gap-2">
                             <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Full Name</label>
-                            <input type="text" id="cust-name" placeholder="John Doe" class="rounded-lg border-slate-200 dark:bg-slate-800 dark:border-slate-600 focus:border-primary focus:ring-primary p-2">
+                            <input type="text" id="cust-name" class="rounded-lg border-slate-200 dark:bg-slate-800 dark:border-slate-600 focus:border-primary focus:ring-primary p-2">
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Email Address</label>
-                            <input type="email" id="cust-email" placeholder="john@example.com" class="rounded-lg border-slate-200 dark:bg-slate-800 dark:border-slate-600 focus:border-primary focus:ring-primary p-2">
+                            <input type="email" id="cust-email" class="rounded-lg border-slate-200 dark:bg-slate-800 dark:border-slate-600 focus:border-primary focus:ring-primary p-2">
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Phone Number</label>
-                            <input type="tel" id="cust-phone" placeholder="(689) 000-0000" class="rounded-lg border-slate-200 dark:bg-slate-800 dark:border-slate-600 focus:border-primary focus:ring-primary p-2">
+                            <input type="tel" id="cust-phone" class="rounded-lg border-slate-200 dark:bg-slate-800 dark:border-slate-600 focus:border-primary focus:ring-primary p-2">
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Service Address</label>
-                            <input type="text" id="cust-address" placeholder="Street, Apt, City" class="rounded-lg border-slate-200 dark:bg-slate-800 dark:border-slate-600 focus:border-primary focus:ring-primary p-2">
+                            <input type="text" id="cust-address" class="rounded-lg border-slate-200 dark:bg-slate-800 dark:border-slate-600 focus:border-primary focus:ring-primary p-2">
                         </div>
                     </div>
                 </section>
@@ -121,27 +124,21 @@ Aqui está o arquivo `agendamento.html` **atualizado novamente**, já com o Pass
 
             <div class="lg:w-[380px] shrink-0">
                 <div class="sticky top-28 space-y-4">
-                    <div class="bg-white dark:bg-[#1a2632] rounded-xl border border-slate-200 dark:border-slate-700 shadow-lg overflow-hidden">
-                        <div class="p-5 border-b border-slate-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50">
-                            <h3 class="font-extrabold text-lg text-slate-900 dark:text-white">Booking Summary</h3>
-                        </div>
-                        <div class="p-5 space-y-4">
-                            <div class="flex justify-between items-start pb-4 border-b border-slate-100 dark:border-slate-700">
-                                <div>
-                                    <p id="summary-name" class="font-bold text-slate-900 dark:text-white">Standard Residential</p>
-                                    <p class="text-sm text-slate-500 dark:text-slate-400">3 Bed, 2 Bath</p>
-                                </div>
-                                <span id="summary-base" class="font-medium text-slate-900 dark:text-white">$120.00</span>
+                    <div class="bg-white dark:bg-[#1a2632] rounded-xl border border-slate-200 dark:border-slate-700 shadow-lg p-5">
+                        <h3 class="font-extrabold text-lg text-slate-900 dark:text-white border-b pb-4 mb-4">Booking Summary</h3>
+                        <div class="flex justify-between items-start pb-4">
+                            <div>
+                                <p id="summary-name" class="font-bold">Standard Residential</p>
+                                <p id="summary-base" class="text-sm text-slate-500">$120.00</p>
                             </div>
-                            <div class="flex justify-between items-center pt-4 border-t border-slate-200 dark:border-slate-700">
-                                <span class="font-bold text-lg text-slate-900 dark:text-white">Total Estimated</span>
-                                <span id="summary-total" class="font-extrabold text-2xl text-primary">$143.78</span>
-                            </div>
-                            <button id="book-now-btn" class="w-full bg-primary hover:bg-blue-600 text-white font-bold text-lg py-4 rounded-lg shadow-lg transition-all flex items-center justify-center gap-2">
-                                <span>Book Now</span>
-                                <span class="material-symbols-outlined">arrow_forward</span>
-                            </button>
                         </div>
+                        <div class="flex justify-between items-center pt-4 border-t">
+                            <span class="font-bold">Total Estimated</span>
+                            <span id="summary-total" class="font-extrabold text-2xl text-primary">$143.78</span>
+                        </div>
+                        <button id="book-now-btn" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-4 rounded-lg mt-6 transition-all">
+                            Book Now
+                        </button>
                     </div>
                 </div>
             </div>
@@ -149,6 +146,11 @@ Aqui está o arquivo `agendamento.html` **atualizado novamente**, já com o Pass
     </main>
 
     <script>
+        // --- COLOQUE SEUS DADOS AQUI ---
+        const SUPABASE_URL = 'SUA_URL_DO_SUPABASE'; 
+        const SUPABASE_KEY = 'SUA_CHAVE_ANON_DO_SUPABASE';
+        const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
         function selectService(element) {
             const cards = document.querySelectorAll('.service-card');
             cards.forEach(card => {
@@ -157,23 +159,47 @@ Aqui está o arquivo `agendamento.html` **atualizado novamente**, já com o Pass
                 card.querySelector('.check-icon').classList.add('hidden');
             });
             element.classList.add('active', 'border-2', 'border-primary', 'bg-primary/5');
-            element.classList.remove('border', 'border-slate-200', 'bg-white');
             element.querySelector('.check-icon').classList.remove('hidden');
 
             const name = element.getAttribute('data-name');
             const price = parseFloat(element.getAttribute('data-price'));
-            const taxRate = 0.19816;
-            const total = price * (1 + taxRate);
+            const total = price * 1.19816;
 
             document.getElementById('summary-name').innerText = name;
             document.getElementById('summary-base').innerText = `$${price.toFixed(2)}`;
             document.getElementById('summary-total').innerText = `$${total.toFixed(2)}`;
         }
 
-        document.getElementById('book-now-btn').addEventListener('click', () => {
-            const name = document.getElementById('cust-name').value;
-            if(!name) { alert('Please enter your name'); return; }
-            alert('Sending to Supabase...');
+        document.getElementById('book-now-btn').addEventListener('click', async () => {
+            const btn = document.getElementById('book-now-btn');
+            const data = {
+                service_type: document.getElementById('summary-name').innerText,
+                base_price: parseFloat(document.getElementById('summary-base').innerText.replace('$', '')),
+                total_price: parseFloat(document.getElementById('summary-total').innerText.replace('$', '')),
+                customer_name: document.getElementById('cust-name').value,
+                customer_email: document.getElementById('cust-email').value,
+                customer_phone: document.getElementById('cust-phone').value,
+                customer_address: document.getElementById('cust-address').value
+            };
+
+            if (!data.customer_name || !data.customer_email) {
+                alert('Please fill in your name and email.');
+                return;
+            }
+
+            btn.innerText = 'Processing...';
+            btn.disabled = true;
+
+            const { error } = await _supabase.from('bookings').insert([data]);
+
+            if (error) {
+                alert('Error: ' + error.message);
+                btn.innerText = 'Book Now';
+                btn.disabled = false;
+            } else {
+                alert('Booking successful!');
+                window.location.reload();
+            }
         });
     </script>
 </body>
