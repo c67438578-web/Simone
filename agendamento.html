@@ -1,17 +1,3 @@
-<head>
-    <meta charset="utf-8"/>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-</head> ```
-
----
-
-### 2. O arquivo completo (Versão Final Pronta para Uso)
-Para não ter erro de onde colar cada coisa, aqui está o código **completo** do seu arquivo `agendamento.html`. 
-
-**Atenção:** Eu deixei um espaço marcado para você colocar a sua **URL** e a sua **Chave Anon** que você pegou no painel do Supabase.
-
-```html
 <!DOCTYPE html>
 <html class="light" lang="en">
 <head>
@@ -21,7 +7,6 @@ Para não ter erro de onde colar cada coisa, aqui está o código **completo** d
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <script id="tailwind-config">
@@ -78,17 +63,17 @@ Para não ter erro de onde colar cada coisa, aqui está o código **completo** d
                         Choose Service Type
                     </h2>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4" id="service-options">
-                        <div onclick="selectService(this)" data-name="Standard Residential" data-price="120" class="service-card active group cursor-pointer relative flex flex-col gap-4 p-5 rounded-xl border-2 border-primary bg-primary/5 dark:bg-primary/10 transition-all">
+                        <div class="service-card active group cursor-pointer relative flex flex-col gap-4 p-5 rounded-xl border-2 border-primary bg-primary/5 dark:bg-primary/10 transition-all" data-name="Standard Residential" data-price="120">
                             <div class="check-icon absolute top-4 right-4 text-primary"><span class="material-symbols-outlined fill-1">check_circle</span></div>
                             <h3 class="font-bold text-slate-900 dark:text-white mb-1">Standard Residential</h3>
                             <p class="mt-3 font-bold text-primary">$120 base</p>
                         </div>
-                        <div onclick="selectService(this)" data-name="Deep Cleaning" data-price="200" class="service-card group cursor-pointer relative flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a2632] hover:border-primary/50 transition-all shadow-sm">
+                        <div class="service-card group cursor-pointer relative flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a2632] hover:border-primary/50 transition-all shadow-sm" data-name="Deep Cleaning" data-price="200">
                             <div class="check-icon hidden absolute top-4 right-4 text-primary"><span class="material-symbols-outlined fill-1">check_circle</span></div>
                             <h3 class="font-bold text-slate-900 dark:text-white mb-1">Deep Cleaning</h3>
                             <p class="mt-3 font-bold text-slate-700 dark:text-slate-300">$200 base</p>
                         </div>
-                        <div onclick="selectService(this)" data-name="Move-In / Out" data-price="250" class="service-card group cursor-pointer relative flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a2632] hover:border-primary/50 transition-all shadow-sm">
+                        <div class="service-card group cursor-pointer relative flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a2632] hover:border-primary/50 transition-all shadow-sm" data-name="Move-In / Out" data-price="250">
                             <div class="check-icon hidden absolute top-4 right-4 text-primary"><span class="material-symbols-outlined fill-1">check_circle</span></div>
                             <h3 class="font-bold text-slate-900 dark:text-white mb-1">Move-In / Out</h3>
                             <p class="mt-3 font-bold text-slate-700 dark:text-slate-300">$250 base</p>
@@ -129,16 +114,20 @@ Para não ter erro de onde colar cada coisa, aqui está o código **completo** d
                         <div class="flex justify-between items-start pb-4">
                             <div>
                                 <p id="summary-name" class="font-bold">Standard Residential</p>
+                                <p class="text-sm text-slate-500">3 Bed, 2 Bath</p>
                                 <p id="summary-base" class="text-sm text-slate-500">$120.00</p>
                             </div>
+                            <p id="summary-price" class="font-bold">$120.00</p>
                         </div>
                         <div class="flex justify-between items-center pt-4 border-t">
                             <span class="font-bold">Total Estimated</span>
                             <span id="summary-total" class="font-extrabold text-2xl text-primary">$143.78</span>
                         </div>
-                        <button id="book-now-btn" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-4 rounded-lg mt-6 transition-all">
+                        <button id="book-now-btn" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-4 rounded-lg mt-6 transition-all flex items-center justify-center gap-2">
                             Book Now
+                            <span class="material-symbols-outlined text-xl">arrow_forward</span>
                         </button>
+                        <p class="text-xs text-center text-slate-500 mt-3">No payment required until service completion</p>
                     </div>
                 </div>
             </div>
@@ -146,20 +135,45 @@ Para não ter erro de onde colar cada coisa, aqui está o código **completo** d
     </main>
 
     <script>
-        // --- COLOQUE SEUS DADOS AQUI ---
-        const SUPABASE_URL = 'https://lkipdnacomlgwqbpgjyi.supabase.co'; 
-        const SUPABASE_KEY = 'sb_publishable_k9TTr19TzWIMWAbID8fuXQ_rIv8RdlE';
-        const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+        // Configuração do Supabase
+        const SUPABASE_URL = 'https://lkipdnacomlgwqbpgjyi.supabase.co';
+        // ATENÇÃO: Substitua pela sua chave anon correta do Supabase
+        // Para pegar a chave: https://supabase.com/dashboard -> seu projeto -> Settings -> API -> anon/public key
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxraXBkbmFjb21sZ3dxYnBnanlpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzUyNDI2NzYsImV4cCI6MjA1MDgxODY3Nn0.YOUR_KEY_HERE'; 
+        
+        let _supabase = null;
+        let useSupabase = false;
+        
+        // Tenta inicializar o Supabase
+        try {
+            if (typeof supabase !== 'undefined' && !SUPABASE_KEY.includes('YOUR_KEY_HERE')) {
+                _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+                useSupabase = true;
+                console.log('✅ Supabase inicializado');
+            } else {
+                console.log('⚠️ Usando modo demonstração (sem Supabase)');
+            }
+        } catch (error) {
+            console.warn('⚠️ Supabase não inicializado:', error);
+            useSupabase = false;
+        }
 
+        // Função para selecionar serviço
         function selectService(element) {
+            console.log('Serviço clicado!', element);
+            
             const cards = document.querySelectorAll('.service-card');
             cards.forEach(card => {
                 card.classList.remove('active', 'border-2', 'border-primary', 'bg-primary/5');
-                card.classList.add('border', 'border-slate-200', 'bg-white', 'dark:bg-[#1a2632]');
-                card.querySelector('.check-icon').classList.add('hidden');
+                card.classList.add('border', 'border-slate-200', 'bg-white');
+                const checkIcon = card.querySelector('.check-icon');
+                if (checkIcon) checkIcon.classList.add('hidden');
             });
+
+            element.classList.remove('border', 'border-slate-200', 'bg-white');
             element.classList.add('active', 'border-2', 'border-primary', 'bg-primary/5');
-            element.querySelector('.check-icon').classList.remove('hidden');
+            const checkIcon = element.querySelector('.check-icon');
+            if (checkIcon) checkIcon.classList.remove('hidden');
 
             const name = element.getAttribute('data-name');
             const price = parseFloat(element.getAttribute('data-price'));
@@ -167,38 +181,132 @@ Para não ter erro de onde colar cada coisa, aqui está o código **completo** d
 
             document.getElementById('summary-name').innerText = name;
             document.getElementById('summary-base').innerText = `$${price.toFixed(2)}`;
+            document.getElementById('summary-price').innerText = `$${price.toFixed(2)}`;
             document.getElementById('summary-total').innerText = `$${total.toFixed(2)}`;
         }
 
+        // Adicionar event listeners aos cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.service-card');
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    selectService(this);
+                });
+            });
+        });
+
+        // Função do botão Book Now
         document.getElementById('book-now-btn').addEventListener('click', async () => {
             const btn = document.getElementById('book-now-btn');
-            const data = {
-                service_type: document.getElementById('summary-name').innerText,
-                base_price: parseFloat(document.getElementById('summary-base').innerText.replace('$', '')),
-                total_price: parseFloat(document.getElementById('summary-total').innerText.replace('$', '')),
-                customer_name: document.getElementById('cust-name').value,
-                customer_email: document.getElementById('cust-email').value,
-                customer_phone: document.getElementById('cust-phone').value,
-                customer_address: document.getElementById('cust-address').value
-            };
+            
+            const customerName = document.getElementById('cust-name').value.trim();
+            const customerEmail = document.getElementById('cust-email').value.trim();
+            const customerPhone = document.getElementById('cust-phone').value.trim();
+            const customerAddress = document.getElementById('cust-address').value.trim();
 
-            if (!data.customer_name || !data.customer_email) {
-                alert('Please fill in your name and email.');
+            // Validação
+            if (!customerName) {
+                alert('⚠️ Please enter your full name.');
+                document.getElementById('cust-name').focus();
                 return;
             }
 
-            btn.innerText = 'Processing...';
+            if (!customerEmail) {
+                alert('⚠️ Please enter your email address.');
+                document.getElementById('cust-email').focus();
+                return;
+            }
+
+            // Validação básica de email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(customerEmail)) {
+                alert('⚠️ Please enter a valid email address.');
+                document.getElementById('cust-email').focus();
+                return;
+            }
+
+            if (!customerPhone) {
+                alert('⚠️ Please enter your phone number.');
+                document.getElementById('cust-phone').focus();
+                return;
+            }
+
+            if (!customerAddress) {
+                alert('⚠️ Please enter the service address.');
+                document.getElementById('cust-address').focus();
+                return;
+            }
+
+            const data = {
+                service_type: document.getElementById('summary-name').innerText,
+                base_price: parseFloat(document.getElementById('summary-base').innerText.replace('
+    </script>
+</body>
+</html>, '')),
+                total_price: parseFloat(document.getElementById('summary-total').innerText.replace('
+    </script>
+</body>
+</html>, '')),
+                customer_name: customerName,
+                customer_email: customerEmail,
+                customer_phone: customerPhone,
+                customer_address: customerAddress,
+                created_at: new Date().toISOString()
+            };
+
+            console.log('📋 Dados do agendamento:', data);
+
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> Processing...';
             btn.disabled = true;
 
-            const { error } = await _supabase.from('bookings').insert([data]);
+            try {
+                if (useSupabase && _supabase) {
+                    // Salvar no Supabase
+                    console.log('💾 Salvando no Supabase...');
+                    const { data: result, error } = await _supabase
+                        .from('bookings')
+                        .insert([data]);
 
-            if (error) {
-                alert('Error: ' + error.message);
-                btn.innerText = 'Book Now';
+                    if (error) {
+                        console.error('❌ Erro do Supabase:', error);
+                        throw new Error(error.message);
+                    }
+                    
+                    console.log('✅ Salvo com sucesso!', result);
+                    alert('✅ Booking successful!\n\nWe will contact you shortly at:\n' + customerEmail);
+                    
+                    // Limpar formulário
+                    document.getElementById('cust-name').value = '';
+                    document.getElementById('cust-email').value = '';
+                    document.getElementById('cust-phone').value = '';
+                    document.getElementById('cust-address').value = '';
+                    
+                    btn.innerHTML = 'Book Now <span class="material-symbols-outlined text-xl">arrow_forward</span>';
+                    btn.disabled = false;
+                } else {
+                    // Modo demonstração (sem Supabase)
+                    console.log('🎭 Modo demonstração - dados que seriam salvos:', data);
+                    
+                    await new Promise(resolve => setTimeout(resolve, 1500));
+                    
+                    alert('✅ Demo Mode: Booking Received!\n\n' +
+                          'Service: ' + data.service_type + '\n' +
+                          'Total: 
+    </script>
+</body>
+</html> + data.total_price.toFixed(2) + '\n' +
+                          'Name: ' + data.customer_name + '\n' +
+                          'Email: ' + data.customer_email + '\n\n' +
+                          '⚠️ To save to database, configure Supabase key.');
+                    
+                    btn.innerHTML = 'Book Now <span class="material-symbols-outlined text-xl">arrow_forward</span>';
+                    btn.disabled = false;
+                }
+            } catch (error) {
+                console.error('❌ Erro ao processar:', error);
+                alert('❌ Error: ' + error.message + '\n\nPlease try again or contact us directly.');
+                btn.innerHTML = 'Book Now <span class="material-symbols-outlined text-xl">arrow_forward</span>';
                 btn.disabled = false;
-            } else {
-                alert('Booking successful!');
-                window.location.reload();
             }
         });
     </script>
