@@ -13,6 +13,7 @@
                 extend: {
                     colors: {
                         "primary": "#137fec",
+                        "primary-dark": "#0b5db0",
                         "background-light": "#f6f7f8",
                         "background-dark": "#101922",
                     },
@@ -25,7 +26,7 @@
         }
     </script>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden transition-colors duration-200">
 
 <header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md">
 <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
@@ -34,7 +35,7 @@
         <a href="index.html" class="block">
             <img src="https://lkipdnacomlgwqbpgjyi.supabase.co/storage/v1/object/public/Logo/LOGO.png" 
                  alt="LOGOS Property Services" 
-                 class="h-20 md:h-32 w-auto object-contain block transition-all">
+                 class="h-24 md:h-40 w-auto object-contain transition-all duration-300 transform hover:scale-105">
         </a>
     </div>
 
@@ -45,7 +46,7 @@
             <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="about.html">About Us</a>
             <a class="text-primary text-sm font-bold leading-normal" href="contact.html">Contact Us</a>
         </nav>
-        <a href="agendamento.html" class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-6 bg-primary hover:bg-blue-600 transition-colors text-white text-sm font-bold shadow-md shadow-primary/20">
+        <a href="agendamento.html" class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-6 bg-primary hover:bg-primary-dark transition-all text-white text-sm font-bold shadow-md shadow-primary/20">
             <span class="truncate">Get a Quote</span>
         </a>
     </div>
@@ -55,7 +56,7 @@
 <main class="flex-grow w-full">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
 <div class="mb-12 flex flex-col gap-3 max-w-3xl">
-<h1 class="text-slate-900 dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">
+<h1 class="text-slate-900 dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">
     Contact LOGOS Property Services
 </h1>
 <p class="text-slate-500 dark:text-slate-400 text-lg md:text-xl font-normal leading-normal">
@@ -101,7 +102,7 @@
 
 <div class="relative overflow-hidden rounded-2xl h-80 shadow-md border border-slate-200 dark:border-slate-700">
     <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112165.71985785055!2d-81.4795415234193!3d28.48165609653805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e773d2f274d907%3A0x1231a4065840f16e!2sOrlando%2C%20FL!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112173.0425785006!2d-81.4795764!3d28.4810052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e773d2f2d76077%3A0x8686d63d8df5529a!2sOrlando%2C%20FL!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
         width="100%" 
         height="100%" 
         style="border:0;" 
@@ -116,22 +117,22 @@
 <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 md:p-10 shadow-lg border border-slate-200 dark:border-slate-700">
 <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Send us a message</h2>
 <p class="text-slate-500 dark:text-slate-400 mb-8">Fill out the form below and we'll get back to you shortly.</p>
-<form action="https://formspree.io/f/MUITO_IMPORTANTE" method="POST" class="flex flex-col gap-6">
+<form action="#" method="POST" class="flex flex-col gap-6">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <label class="flex flex-col gap-2">
 <span class="text-slate-900 dark:text-white text-sm font-semibold">Full Name</span>
-<input name="name" required class="form-input w-full rounded-lg border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white h-12 px-4" placeholder="Jane Doe" type="text"/>
+<input name="name" required class="form-input w-full rounded-lg border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white h-12 px-4 focus:ring-primary focus:border-primary" placeholder="Jane Doe" type="text"/>
 </label>
 <label class="flex flex-col gap-2">
 <span class="text-slate-900 dark:text-white text-sm font-semibold">Email Address</span>
-<input name="email" required class="form-input w-full rounded-lg border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white h-12 px-4" placeholder="jane@example.com" type="email"/>
+<input name="email" required class="form-input w-full rounded-lg border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white h-12 px-4 focus:ring-primary focus:border-primary" placeholder="jane@example.com" type="email"/>
 </label>
 </div>
 <label class="flex flex-col gap-2">
 <span class="text-slate-900 dark:text-white text-sm font-semibold">How can we help?</span>
-<textarea name="message" required class="form-textarea w-full rounded-lg border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white p-4" placeholder="Tell us about your cleaning needs..." rows="4"></textarea>
+<textarea name="message" required class="form-textarea w-full rounded-lg border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white p-4 focus:ring-primary focus:border-primary" placeholder="Tell us about your cleaning needs..." rows="4"></textarea>
 </label>
-<button class="bg-primary hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all shadow-lg flex items-center justify-center gap-2" type="submit">
+<button class="bg-primary hover:bg-primary-dark text-white font-bold py-4 px-8 rounded-lg transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2" type="submit">
 <span class="material-symbols-outlined text-[20px]">send</span> Send Message
 </button>
 </form>
@@ -145,17 +146,19 @@
 </div>
 </main>
 
-<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12">
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-8">
-        <img src="https://lkipdnacomlgwqbpgjyi.supabase.co/storage/v1/object/public/Logo/LOGO.png" alt="LOGOS Logo" class="h-16 w-auto object-contain">
-        <div class="flex flex-col md:flex-row justify-between w-full items-center gap-6 pt-8 border-t border-slate-100 dark:border-slate-800">
-            <div class="text-slate-500 dark:text-slate-400 text-sm">© 2024 LOGOS Property Services LLC. All rights reserved.</div>
-            <div class="flex gap-8">
-                <a class="text-slate-600 dark:text-slate-300 text-sm hover:text-primary transition-colors" href="index.html">Home</a>
-                <a class="text-slate-600 dark:text-slate-300 text-sm hover:text-primary transition-colors" href="services.html">Services</a>
-                <a class="text-slate-600 dark:text-slate-300 text-sm hover:text-primary transition-colors" href="about.html">About Us</a>
-            </div>
+        <img src="https://lkipdnacomlgwqbpgjyi.supabase.co/storage/v1/object/public/Logo/LOGO.png" 
+             alt="LOGOS Logo" 
+             class="h-32 md:h-48 w-auto object-contain drop-shadow-sm">
+        
+        <div class="flex gap-8">
+            <a href="index.html" class="text-slate-500 hover:text-primary text-sm font-medium transition-colors">Home</a>
+            <a href="services.html" class="text-slate-500 hover:text-primary text-sm font-medium transition-colors">Services</a>
+            <a href="about.html" class="text-slate-500 hover:text-primary text-sm font-medium transition-colors">About Us</a>
         </div>
+        
+        <div class="text-slate-400 dark:text-slate-500 text-xs">© 2026 LOGOS Property Services LLC. All rights reserved.</div>
     </div>
 </footer>
 </body></html>
