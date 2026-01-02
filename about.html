@@ -13,6 +13,7 @@
                 extend: {
                     colors: {
                         "primary": "#137fec",
+                        "primary-dark": "#0b5db0",
                         "background-light": "#f6f7f8",
                         "background-dark": "#101922",
                     },
@@ -27,24 +28,30 @@
 </head>
 <body class="font-display bg-background-light dark:bg-background-dark text-[#0d141b] dark:text-slate-100">
 <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
-<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf3] dark:border-b-slate-700 bg-white dark:bg-[#1a2632] px-10 py-3">
-<div class="flex items-center gap-4">
-<div class="size-8 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
-<span class="material-symbols-outlined">cleaning_services</span>
-</div>
-<h2 class="text-[#0d141b] dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">LOGOS PROPERTY SERVICES</h2>
-</div>
-<div class="flex flex-1 justify-end gap-8">
-<div class="hidden md:flex items-center gap-9">
-<a class="text-[#0d141b] dark:text-slate-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="index.html">Home</a>
-<a class="text-[#0d141b] dark:text-slate-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="services.html">Services</a>
-<a class="text-primary text-sm font-bold leading-normal" href="about.html">About Us</a>
-<a class="text-[#0d141b] dark:text-slate-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="contact.html">Contact</a>
-</div>
-<a href="agendamento.html" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors">
-<span class="truncate">Get a Quote</span>
-</a>
-</div>
+    
+<header class="sticky top-0 z-50 w-full border-b border-solid border-b-[#e7edf3] dark:border-b-slate-700 bg-white dark:bg-[#1a2632] backdrop-blur-sm px-4 md:px-10 py-4">
+    <div class="mx-auto flex max-w-[1200px] items-center justify-between">
+        
+        <div class="flex items-center shrink-0">
+            <a href="index.html" class="block">
+                <img src="https://lkipdnacomlgwqbpgjyi.supabase.co/storage/v1/object/public/Logo/LOGO.png" 
+                     alt="LOGOS Property Services" 
+                     class="h-20 md:h-32 w-auto object-contain block transition-all">
+            </a>
+        </div>
+
+        <div class="flex items-center gap-4 md:gap-8">
+            <nav class="hidden md:flex items-center gap-6 lg:gap-9">
+                <a class="text-[#0d141b] dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="text-[#0d141b] dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="services.html">Services</a>
+                <a class="text-primary text-sm font-bold" href="about.html">About Us</a>
+                <a class="text-[#0d141b] dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="contact.html">Contact</a>
+            </nav>
+            <a href="agendamento.html" class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold hover:bg-primary-dark transition-all shadow-md shadow-primary/20">
+                <span class="truncate">Get a Quote</span>
+            </a>
+        </div>
+    </div>
 </header>
 
 <main class="flex-grow">
@@ -58,7 +65,7 @@
 <h2 class="text-[#4c739a] dark:text-slate-400 text-lg font-normal leading-relaxed">Top-tier commercial and residential cleaning services committed to integrity and quality.</h2>
 </div>
 <div class="flex gap-4">
-<a href="services.html" class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-slate-50 text-base font-bold hover:bg-blue-600 transition-colors">Our Services</a>
+<a href="services.html" class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-slate-50 text-base font-bold hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20">Our Services</a>
 <a href="contact.html" class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary/10 text-primary text-base font-bold hover:bg-primary/20 transition-colors">Contact Us</a>
 </div>
 </div>
@@ -93,8 +100,11 @@
 </section>
 </main>
 
-<footer class="bg-white dark:bg-[#0d141b] py-12 px-10 border-t border-slate-200 dark:border-slate-800 text-center">
-<p class="text-sm text-slate-500">© 2024 LOGOS PROPERTY SERVICES LLC. All rights reserved.</p>
+<footer class="bg-white dark:bg-[#0d141b] py-12 px-4 md:px-10 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-[1200px] flex flex-col items-center gap-6">
+        <img src="https://lkipdnacomlgwqbpgjyi.supabase.co/storage/v1/object/public/Logo/LOGO.png" alt="LOGOS Logo" class="h-16 w-auto object-contain">
+        <p class="text-sm text-slate-500">© 2024 LOGOS PROPERTY SERVICES LLC. All rights reserved.</p>
+    </div>
 </footer>
 </div>
 </body></html>
