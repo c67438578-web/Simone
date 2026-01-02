@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
+<html lang="en" class="light">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
 <script>
 tailwind.config = {
   darkMode: "class",
@@ -18,10 +17,8 @@ tailwind.config = {
       colors: {
         primary: "#137fec",
         "primary-dark": "#0b5db0",
-        "background-light": "#ffffff",
         "background-off": "#f6f8fa",
         "background-dark": "#101922",
-        "text-main": "#0d141b",
         "text-secondary": "#4c739a",
       },
       fontFamily: {
@@ -33,28 +30,29 @@ tailwind.config = {
 </script>
 </head>
 
-<body class="bg-background-off dark:bg-background-dark text-text-main font-display antialiased overflow-x-hidden flex flex-col min-h-screen">
+<body class="bg-background-off dark:bg-background-dark font-display text-slate-900 flex flex-col min-h-screen">
 
 <!-- HEADER -->
-<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md">
-  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-    
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+
     <a href="index.html">
-      <img src="https://lkipdnacomlgwqbpgjyi.supabase.co/storage/v1/object/public/Logo/LOGO.png"
-           alt="LOGOS Property Services"
-           class="h-24 md:h-40 w-auto object-contain transition-all hover:scale-105">
+      <img
+        src="https://lkipdnacomlgwqbpgjyi.supabase.co/storage/v1/object/public/Logo/LOGO.png"
+        alt="LOGOS Property Services"
+        class="h-24 md:h-36 object-contain">
     </a>
 
-    <div class="flex items-center gap-6">
-      <nav class="hidden md:flex gap-9">
-        <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-primary">Home</a>
-        <a href="services.html" class="text-sm font-medium text-slate-600 hover:text-primary">Services</a>
-        <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-primary">About Us</a>
-        <a href="contact.html" class="text-sm font-bold text-primary">Contact</a>
+    <div class="flex items-center gap-8">
+      <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
+        <a href="index.html" class="hover:text-primary">Home</a>
+        <a href="services.html" class="hover:text-primary">Services</a>
+        <a href="about.html" class="hover:text-primary">About Us</a>
+        <a href="contact.html" class="text-primary font-bold">Contact</a>
       </nav>
 
       <a href="agendamento.html"
-         class="rounded-lg bg-primary px-6 py-2 text-sm font-bold text-white hover:bg-primary-dark shadow-md">
+         class="bg-primary hover:bg-primary-dark text-white text-sm font-bold px-6 py-2 rounded-lg shadow">
         Get a Quote
       </a>
     </div>
@@ -63,33 +61,33 @@ tailwind.config = {
 
 <!-- MAIN -->
 <main class="flex-grow">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="max-w-7xl mx-auto px-4 py-16">
 
     <!-- TITLE -->
-    <div class="mb-12 max-w-3xl">
-      <h1 class="text-4xl md:text-5xl font-black text-slate-900">Contact Us</h1>
-      <p class="mt-4 text-lg text-text-secondary">
+    <div class="max-w-3xl mb-12">
+      <h1 class="text-4xl md:text-5xl font-black mb-4">Contact Us</h1>
+      <p class="text-lg text-text-secondary">
         Professional Cleaning Services in Orlando. We're here to help your property shine.
       </p>
     </div>
 
-    <!-- GRID -->
+    <!-- CONTENT GRID -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
 
-      <!-- LEFT -->
+      <!-- LEFT COLUMN -->
       <div class="lg:col-span-5 flex flex-col gap-8">
 
         <!-- CONTACT INFO -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
-          <h3 class="text-lg font-bold mb-8">Get in Touch</h3>
+        <div class="bg-white rounded-2xl p-8 shadow border border-slate-100">
+          <h3 class="font-bold text-lg mb-8">Get in Touch</h3>
 
           <div class="flex flex-col gap-8">
             <div class="flex gap-4">
-              <div class="p-3 rounded-xl bg-primary/10 text-primary">
+              <div class="p-3 bg-primary/10 text-primary rounded-xl">
                 <span class="material-symbols-outlined">call</span>
               </div>
               <div>
-                <span class="text-sm text-text-secondary">Phone Support</span>
+                <span class="text-sm text-text-secondary">Phone</span>
                 <a href="tel:6893397348" class="block font-bold hover:text-primary">
                   689-339-7348
                 </a>
@@ -97,11 +95,11 @@ tailwind.config = {
             </div>
 
             <div class="flex gap-4">
-              <div class="p-3 rounded-xl bg-primary/10 text-primary">
+              <div class="p-3 bg-primary/10 text-primary rounded-xl">
                 <span class="material-symbols-outlined">mail</span>
               </div>
               <div>
-                <span class="text-sm text-text-secondary">Email Address</span>
+                <span class="text-sm text-text-secondary">Email</span>
                 <a href="mailto:contact@logospropservices.com"
                    class="block font-bold hover:text-primary">
                   contact@logospropservices.com
@@ -111,17 +109,17 @@ tailwind.config = {
           </div>
         </div>
 
-        <!-- IMAGE (FIXED) -->
-        <div class="relative h-64 overflow-hidden rounded-2xl shadow-md">
+        <!-- IMAGE (NO CUT - FIXED) -->
+        <div class="rounded-2xl shadow-md overflow-hidden bg-white">
           <img
             src="https://lkipdnacomlgwqbpgjyi.supabase.co/storage/v1/object/public/Fotos/FOTO%203.png"
-            alt="Professional Cleaning"
-            class="w-full h-full object-cover object-top">
+            alt="Professional Cleaning Team"
+            class="w-full h-auto object-contain">
         </div>
 
       </div>
 
-      <!-- RIGHT -->
+      <!-- RIGHT COLUMN -->
       <div class="lg:col-span-7">
         <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
           <form class="flex flex-col gap-6">
@@ -147,7 +145,7 @@ tailwind.config = {
             </label>
 
             <button type="submit"
-              class="bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-lg shadow-lg transition active:scale-95">
+              class="bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-lg shadow transition active:scale-95">
               Send Message
             </button>
 
@@ -160,13 +158,14 @@ tailwind.config = {
 </main>
 
 <!-- FOOTER -->
-<footer class="bg-white border-t border-slate-200 py-16">
-  <div class="max-w-7xl mx-auto px-4 text-center flex flex-col items-center gap-8">
-    <img src="https://lkipdnacomlgwqbpgjyi.supabase.co/storage/v1/object/public/Logo/LOGO.png"
-         alt="LOGOS Logo"
-         class="h-32 object-contain">
+<footer class="bg-white border-t border-slate-200 py-12">
+  <div class="max-w-7xl mx-auto px-4 text-center flex flex-col items-center gap-6">
+    <img
+      src="https://lkipdnacomlgwqbpgjyi.supabase.co/storage/v1/object/public/Logo/LOGO.png"
+      alt="LOGOS Logo"
+      class="h-28 object-contain">
 
-    <div class="flex gap-8 text-slate-500 font-semibold">
+    <div class="flex gap-6 text-slate-500 font-semibold text-sm">
       <a href="index.html" class="hover:text-primary">Home</a>
       <a href="services.html" class="hover:text-primary">Services</a>
       <a href="about.html" class="hover:text-primary">About Us</a>
